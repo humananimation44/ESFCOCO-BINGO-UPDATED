@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bin-go | Rewards</title>
+        <link rel="stylesheet" href="{{ url_for('design_css') }}">
+    </head>
+    <body>
+        <main class="page-shell">
+            <p class="back-link"><a class="action-button" href="/return_home">Back to Home</a></p>
+            <header class="page-heading">
+                <p class="eyebrow">Your impact</p>
+                <h1>Rewards</h1>
+                <p>Your score is currently <strong>{{ score }}</strong> points.</p>
+            </header>
+            <section class="reward-panel" aria-label="Reward progress">
+                <div class="reward-item">
+                    <div class="reward-heading">
+                        <h2>Next reward</h2>
+                        <span>{{ progress }} / {{ reward_threshold }} points</span>
+                    </div>
+                    <progress class="reward-progress" value="{{ progress }}" max="{{ reward_threshold }}" aria-label="Progress toward your next reward"></progress>
+                    <p class="reward-copy">{{ po }}% of the way to your next reward.</p>
+                </div>
+                <div class="reward-item">
+                    <div class="reward-heading">
+                        <h2>Big reward</h2>
+                        <span>{{ lp }} / {{ large_reward_threshold }} points</span>
+                    </div>
+                    <progress class="reward-progress" value="{{ lp }}" max="{{ large_reward_threshold }}" aria-label="Progress toward your next big reward"></progress>
+                    <p class="reward-copy">{{ pl }}% of the way to your big reward.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

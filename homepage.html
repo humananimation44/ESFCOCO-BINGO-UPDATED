@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bin-go, we reward responsible disposal</title>
+        <link rel="stylesheet" href="{{ url_for('design_css') }}">
+    </head>
+    <body>
+        <main class="home-layout">
+            <section class="info-grid" aria-label="About Bin-go">
+                <article class="info-card">
+                    <h1>Bin-GO!</h1>
+                    <p>A webcam-based anti-litter reward app that watches a user dispose of trash and grants points when the system detects a valid throw/disposal action.</p>
+                    <p class="tagline">We don&rsquo;t just track recycling; we reward it.</p>
+                </article>
+                <article class="info-card">
+                    <h2>Who are we?</h2>
+                    <p>We are Neel, Mitt and Hector, three students at RCHK who are all invested in technology and have decent knowledge in coding. We have never participated in a ESF COCO hackathon, however we hope to win!</p>
+                </article>
+                <article class="info-card">
+                    <h2>Sources</h2>
+                    <ul class="source-list">
+                        <li><a href="https://canva.link/rn6ypr3hn9t2h48" target="_blank" rel="noopener noreferrer">Slideshow</a></li>
+                        <li><a href="https://github.com/humananimation44/ESFCOCO-BINGO-UPDATED/tree/main" target="_blank" rel="noopener noreferrer">GitHub repo</a></li>
+                    </ul>
+                </article>
+            </section>
+
+            {% if user != "not logged in" %}
+            <section class="account-panel" aria-label="Account">
+                    <h2>Welcome, {{ user }}</h2>
+                    <p class="welcome-copy">Your score is {{ score }} points.</p>
+                    <div class="account-actions">
+                        <button type="button" onclick="window.location.href='/demo'">Demo</button>
+                        <button type="button" onclick="window.location.href='/rewards'">Rewards</button>
+                        <a class="action-button" href="/logout">Log Out</a>
+                    </div>
+            </section>
+            {% else %}
+            <div class="account-row">
+                <section class="account-panel" aria-label="Account login">
+                    <h2>Log in or create an account</h2>
+                    <form class="auth-form" action="/result" method="post">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="username">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" autocomplete="current-password">
+                        <input type="submit" value="Log In / Sign Up">
+                    </form>
+                </section>
+                <aside class="judge-panel" aria-label="Judge login credentials">
+                    <p class="judge-kicker">For judges *ONLY*</p>
+                    <h2>Please use these set credentials for you!</h2>
+                    <dl class="judge-credentials">
+                        <div>
+                            <dt>Username *case sensitive*</dt>
+                            <dd>Neel</dd>
+                        </div>
+                        <div>
+                            <dt>Password</dt>
+                            <dd>1234</dd>
+                        </div>
+                    </dl>
+                </aside>
+            </div>
+            {% endif %}
+        </main>
+    </body>
+</html>
