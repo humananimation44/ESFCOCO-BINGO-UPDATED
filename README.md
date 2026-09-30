@@ -15,7 +15,7 @@ We used **MediaPipe Hands**, an already existing, trained landmark detection mod
 
 ## 🤖 Tools & Workflow
 
-We also utilized **Perplexity** as a learning and coding assistant for brainstorming, explaining Mediapip/OpenCV concepts, and troubleshooting; we did not train the underlying hand model. Other than OpenCV code, we used Perplexity simply to troubleshoot in extreme cases, with minimal use, and **Copilot in VS Code Studio** for debugging, as well as open-source HTML (very minimal use, however) for embedding the Python code into our HTML; we used light assistance from Copilot and a YouTube video to use Flask to connect the two languages.  
+We also utilized **Perplexity** as a learning and coding assistant for brainstorming, explaining Mediapip/OpenCV concepts, and troubleshooting; we did not train the underlying hand model. Other than OpenCV code, we used Perplexity simply to troubleshoot in extreme cases, with minimal use, and **Copilot in VS Code Studio** for debugging, as well as open-source HTML (very minimal use, however) for embedding the Python code into our HTML; we used light assistance from Copilot and a YouTube video to use Flask to connect the two languages.  Decent use for AI in the CSS code.
 (YouTube link: [https://www.youtube.com/watch?v=0meTbQQaosU](https://www.youtube.com/watch?v=0meTbQQaosU).)
 
 ---
