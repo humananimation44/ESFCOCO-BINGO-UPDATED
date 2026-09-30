@@ -30,6 +30,7 @@ Adopting the camera-tracking model from MediaPipe, we added visuals using simple
 
 - **MediaPipe Hands:** [https://mediapipe.readthedocs.io/en/latest/solutions/hands.html](https://mediapipe.readthedocs.io/en/latest/solutions/hands.html)
 - **Reactbits:** https://reactbits.dev/backgrounds/ghost-fibers?lineColor=2eb357&glowColor=9aff00
+- **Old Repo:** https://github.com/humananimation44/ESFCOCO-Bin-GO/blob/main/README.md
 
 ---
 
